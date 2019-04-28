@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.hotelreserve.web.booking">
+    <data>
+        <instance id="bookingDc"
+                  class="com.company.hotelreserve.entity.Booking"
+                  view="_local">
+            <loader id="bookingDl"/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="bookingDc">
+            <column width="250px">
+                <textField id="passport_numberField" property="passport_number"/>
+                <textField id="nameField" property="name"/>
+                <textField id="phoneField" property="phone"/>
+                <textField id="emailField" property="email"/>
+                <dateField id="arrival_dateField" property="arrival_date"/>
+                <textField id="night_numberField" property="night_number"/>
+                <textField id="room_numberField" property="room_number"/>
+                <textField id="stateField" property="state" editable="false"/>
+            </column>
+        </form>
+        <groupBox id="procActionsBox"
+                  caption="msg://process"
+                  spacing="true"
+                  width="AUTO"
+                  orientation="vertical">
+            <fragment id="procActionsFragment"
+                      screen="bpm_ProcActionsFragment"/>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
