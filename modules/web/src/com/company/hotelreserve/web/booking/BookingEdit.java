@@ -1,10 +1,6 @@
 package com.company.hotelreserve.web.booking;
 
-import com.haulmont.bpm.entity.ProcAttachment;
 import com.haulmont.bpm.gui.procactionsfragment.ProcActionsFragment;
-import com.haulmont.cuba.gui.app.core.file.FileDownloadHelper;
-import com.haulmont.cuba.gui.components.Table;
-import com.haulmont.cuba.gui.model.CollectionLoader;
 import com.haulmont.cuba.gui.model.InstanceContainer;
 import com.haulmont.cuba.gui.model.InstanceLoader;
 import com.haulmont.cuba.gui.screen.*;
